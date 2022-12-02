@@ -1,11 +1,21 @@
 
 class CStudent:
+    objcount=0
     def __init__(self,id,name,department,Email,birthday):
        self.__id=id
        self.__name=name
        self.__department=department
        self.__Email=Email
        self.__birthday=birthday
+       CStudent.objcountadd()
+       CStudent
+    @staticmethod
+    def objcountadd():
+        CStudent.objcount+=1
+        print(f'Total {CStudent.objcount} student')
+    @staticmethod
+    def getobjcount():
+        return CStudent.objcount
     @property
     def id(self):
         return 'None'
@@ -55,6 +65,7 @@ class CStudent:
     @birthday.getter
     def getbirthday(self):
         return self.__birthday    
+
 studentlist=[0 for i in range(5)] 
 studentlist[0]=CStudent('S109102345','張三','IECS', 'zs100232@gmail.com', '2000-02-02')
 studentlist[1]=CStudent('S109104533','李四','IECS', 'ktr002222@gmail.com', '2004-03-22')
