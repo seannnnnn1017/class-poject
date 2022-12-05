@@ -1,4 +1,4 @@
-import time
+
 import random
 class RPG:
     def __init__(self,number,name,attack,defense,blood,skill,skilltime,acurracy,critical) -> None:
