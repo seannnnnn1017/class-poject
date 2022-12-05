@@ -129,7 +129,7 @@ def PVP(play1:RPG,play2:RPG):
               =======================
                                       
               """)
-        a=input("")
+        a=input("enter下一步")
         if p1blood <=0 or p2blood <=0:
             break
         damage=0
@@ -163,7 +163,7 @@ def PVP(play1:RPG,play2:RPG):
               技能冷卻:{p2time}        
               =======================
               """)
-        a=input("")
+        a=input("enter下一步")
         if p1blood <=0 or p2blood <=0:
             break
         if p1time>0:p1time-=1
