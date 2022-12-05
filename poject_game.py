@@ -99,7 +99,7 @@ def PVP(play1:RPG,play2:RPG):
         damage=0
         chance=random.randint(1,101)
 
-        if chance<play1.acurracy: #命中率
+        if chance<=play1.acurracy: #命中率
             damage=(play1.attack)*10/((play2.defense))
             chance=random.randint(1,101)
             if chance <= play1.critical:damage*=2 #爆擊率
@@ -129,13 +129,13 @@ def PVP(play1:RPG,play2:RPG):
               =======================
                                       
               """)
-        time.sleep(2)
+        a=input("")
         if p1blood <=0 or p2blood <=0:
             break
         damage=0
         chance=random.randint(1,101)
         
-        if chance<play2.acurracy: #命中率
+        if chance<=play2.acurracy: #命中率
             damage=(play2.attack)*10/((play1.defense)) 
             chance=random.randint(1,101)
             if chance <= play2.critical:damage*=2 #爆擊
@@ -163,7 +163,7 @@ def PVP(play1:RPG,play2:RPG):
               技能冷卻:{p2time}        
               =======================
               """)
-        time.sleep(2)
+        a=input("")
         if p1blood <=0 or p2blood <=0:
             break
         if p1time>0:p1time-=1
@@ -175,5 +175,5 @@ def PVP(play1:RPG,play2:RPG):
 player=['none' for i in range(10)]
 player[1]=RPG(1,'咪咪',50,1000,50,'睡覺',2,100,20)
 player[2]=RPG(2,'李三',100,1,10000,'嘲諷',3,75,50)
-player[3]=RPG(3,'楊翔順',300,20,1000,'撞擊',4,30,60)
+player[3]=RPG(3,'楊翔順',300,20,1000,'撞擊',4,40,60)
 PVP(player[1],player[3])
