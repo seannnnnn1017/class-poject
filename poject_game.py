@@ -50,10 +50,6 @@ def skill(skill_name,playnum):
             p2time =3
             
 
-        
-
-    
-
 
 def PVP(play1:RPG,play2:RPG):
 
